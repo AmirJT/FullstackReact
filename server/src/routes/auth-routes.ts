@@ -1,8 +1,8 @@
-import { Router, Request, Response } from 'express';
-import { User } from '../models/user';
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
-import dotenv from 'dotenv';
+import { Router, Request, Response } from "express";
+import { User } from "../models/user";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcryptjs"; // ✅ Fixed Import
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -22,7 +22,7 @@ export const login = async (req: Request, res: Response) => {
     console.log("🔑 Stored password hash:", user.password);
 
     // Compare password
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = bcrypt.compareSync(password, user.password); // ✅ Use Sync version for consistency
     console.log("🔎 Password match result:", isMatch);
 
     if (!isMatch) {
@@ -45,6 +45,6 @@ export const login = async (req: Request, res: Response) => {
 const router = Router();
 
 // POST /login - Login a user
-router.post('/login', login);
+router.post("/login", login);
 
 export default router;
