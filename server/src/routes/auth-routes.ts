@@ -1,7 +1,7 @@
 import { Router, Request, Response } from "express";
 import { User } from "../models/user";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs"; // ✅ Fixed Import
+const bcrypt = require("bcrypt");
 import dotenv from "dotenv";
 
 dotenv.config();
