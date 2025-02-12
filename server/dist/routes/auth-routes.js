@@ -7,7 +7,7 @@ exports.login = void 0;
 const express_1 = require("express");
 const user_1 = require("../models/user");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const bcrypt = require("bcrypt");
+const bcryptjs_1 = __importDefault(require("bcryptjs")); // ✅ Fixed Import
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const login = async (req, res) => {
@@ -23,7 +23,7 @@ const login = async (req, res) => {
         console.log("✅ User found:", user.username);
         console.log("🔑 Stored password hash:", user.password);
         // Compare password
-        const isMatch = bcrypt.compareSync(password, user.password); // ✅ Use Sync version for consistency
+        const isMatch = bcryptjs_1.default.compareSync(password, user.password); // ✅ Use Sync version for consistency
         console.log("🔎 Password match result:", isMatch);
         if (!isMatch) {
             console.log("❌ Password did not match!");
