@@ -18,8 +18,8 @@ const login = async (userInfo: UserLogin) => {
 
     return { success: true, token: data.token };
   } catch (error) {
-    console.error("Login error:", error);
-    return { success: false, message: error.message };
+    console.error("Login error:", (error as Error).message); // ✅ Explicitly cast as `Error`
+    return { success: false, message: (error as Error).message };
   }
 };
 
