@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    /* Modules */
+    "module": "CommonJS",
+    "moduleResolution": "Node", // ✅ Fix: Use 'Node' instead of 'bundler'
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "typeRoots": ["./node_modules/@types", "./src/types"]
+}
