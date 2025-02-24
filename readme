@@ -1,0 +1,57 @@
+# 🚀 Full Stack Project
+
+## 📌 Overview
+This is a **Full Stack Web Application** that consists of a `client` directory for the frontend. The project is built using modern web technologies and follows best practices for scalability and maintainability.
+
+## 📂 Project Structure
+```
+/fullstack
+│── /client     # Frontend code (React/Next.js)
+│── /server     # Backend code (if applicable)
+│── package.json  # Project dependencies
+│── README.md   # Project documentation
+```
+
+## 📦 Installation
+Make sure you have **Node.js** installed. Then, follow these steps:
+
+1️⃣ Navigate to the `client` directory:
+```sh
+cd client
+```
+2️⃣ Install dependencies:
+```sh
+npm install
+```
+
+## 🏃 Running the Project
+To start the development server, use the correct command based on the framework:
+
+🔹 **For React:**
+```sh
+npm start
+```
+
+🔹 **For Next.js:**
+```sh
+npm run dev
+```
+
+## 🚧 Troubleshooting
+If you encounter errors:
+- Ensure you are in the correct directory (`client`).
+- Check if `package.json` exists.
+- Run `npm install` to install missing dependencies.
+- Run `npm run` to check available scripts.
+
+## ✨ Features
+✅ Fully responsive frontend
+✅ Modern UI/UX
+✅ Scalable and maintainable structure
+✅ Easily deployable
+
+## 📜 License
+This project is open-source and available for modifications. Feel free to contribute! 🎉
+
+## 📞 Contact
+GitHub: [github.com/amirjt](https://github.com/amirjt)
